@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AirMouse Exhibition Challenge - TypeScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app-container">
+      <!-- Loading Overlay -->
+      <div id="loading-overlay">
+        <div class="spinner"></div>
+        <h2 style="font-weight: 700; margin-bottom: 12px; font-size: 56px;">Loading Game...</h2>
+        <p style="color: var(--text-muted); font-size: 32px;">Initializing Camera Input</p>
+      </div>
+
+
+      <!-- Main Canvas -->
+      <canvas id="game-canvas" width="1920" height="1080"></canvas>
+
+      <!-- Ranked Victory Modal -->
+      <div id="ranked-modal" class="modal-backdrop" style="display: none;">
+        <div class="modal-card">
+          <div class="modal-title">🏆 RANKED COMPLETED!</div>
+          <div class="modal-subtitle" id="ranked-time-display">Total Time: 0.00s</div>
+          <p style="margin-bottom: 25px; color: var(--text-muted); font-size: 32px;">Enter your name for the Global Leaderboard:</p>
+          <input type="text" id="player-name-input" class="name-input" maxlength="16" placeholder="Your Name" />
+          <button id="btn-submit-score" class="btn-submit">Submit Score</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
